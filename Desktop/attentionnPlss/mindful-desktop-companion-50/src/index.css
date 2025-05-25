@@ -1,0 +1,110 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 55% 97%;
+    --foreground: 200 20% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 20% 20%;
+
+    --primary: 200 70% 45%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 160 40% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 20% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 24 90% 55%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 200 70% 45%;
+
+    --radius: 0.8rem;
+
+    --sidebar-background: 195 55% 97%;
+    --sidebar-foreground: 200 20% 20%;
+    --sidebar-primary: 200 70% 45%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 160 40% 97%;
+    --sidebar-accent-foreground: 200 20% 20%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 200 70% 45%;
+  }
+
+  .dark {
+    --background: 198 50% 15%;
+    --foreground: 210 40% 98%;
+
+    --card: 198 50% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 198 50% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 200 70% 45%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 160 40% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 24 90% 55%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 200 70% 45%;
+    
+    --sidebar-background: 198 50% 15%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 200 70% 45%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 198 50% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 198 50% 20%;
+    --sidebar-ring: 200 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .attention-card {
+    @apply rounded-2xl border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-md;
+  }
+  
+  .attention-stat {
+    @apply flex flex-col items-center justify-center rounded-lg p-4 bg-attention-blue-50 bg-opacity-50;
+  }
+  
+  .attention-button {
+    @apply rounded-full px-6 py-3 font-medium transition-all duration-300;
+  }
+}
